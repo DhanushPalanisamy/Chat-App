@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ChatApp</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <aside class="sidebar">
+      <header class="sidebar-header">
+        <h2>ChatApp <i class="bi bi-whatsapp"></i></h2>
+        <button id="open-settings"><i class="bi bi-gear-wide"></i></button>
+      </header>
+      <div class="tabs">
+        <button class="tab-btn active" data-target="chats">Chats</button>
+        <button class="tab-btn" data-target="groups">Groups</button>
+      </div>
+      <div id="chats" class="tab-content active">
+        <button class="new-btn" id="new-chat">New Chat</button>
+        <ul class="contact-list" id="chat-list">
+          <li class="contact-item">Mom</li>
+          <li class="contact-item">Dhanush</li>
+          <li class="contact-item">Shreiya</li>
+          <li class="contact-item">Jack</li>
+        </ul>
+      </div>
+      <div id="groups" class="tab-content">
+        <button class="new-btn" id="new-group">New Group</button>
+        <ul class="contact-list" id="group-list">
+          <li class="contact-item">AI&DS 2026 </li>
+          <li class="contact-item">Friends</li>
+        </ul>
+      </div>
+    </aside>
+    <main class="chat-window">
+      <div class="chat-header">
+        <span id="chat-title">Select a chat</span>
+      </div>
+      <div class="chat-messages" id="chat-messages"></div>
+      <form class="chat-input-area" id="chat-form">
+        <input type="text" id="message-input" placeholder="Type a message..." autocomplete="off"/>
+        <button type="submit">Send</button>
+      </form>
+    </main>
+  </div>
+
+  <!-- Settings Modal -->
+  <div class="modal-overlay hidden" id="settings-modal">
+    <div class="modal">
+      <h3>Settings</h3>
+      <label>
+        Theme:
+        <select id="theme-selector">
+          <option value="cute">Cute (pink)</option>
+          <option value="light">Light</option>
+        </select>
+      </label>
+      <button id="close-settings">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
